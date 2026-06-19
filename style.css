@@ -1,0 +1,32 @@
+* {
+    margin : 0;
+}
+h1 {
+    font-size: 100px;
+    padding : 10% 0 0% 10%;
+    color: white;
+}
+body {
+    background-image: url(./images/mountains-2.jpg);
+    background-size: 70% ;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.destination-holder {
+    position: relative;
+    left: -25%;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/blocknote.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+}
+h2 {
+    font-size: 25px;
+    height: 100%;
+    align-self: center;
+    padding-top: 175px;
+}
