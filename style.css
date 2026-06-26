@@ -1,32 +1,78 @@
 * {
     margin : 0;
 }
+@font-face {
+    font-family: "Vogue";
+    src:url(./fonts/Vogue.ttf);
+}
 h1 {
     font-size: 100px;
-    padding : 10% 0 0% 10%;
+    font-family: "Vogue";
+    text-align: center;
+    padding-top: 10%;
     color: white;
+    z-index: 1;
+    color: #536e41;
 }
-body {
+header {
+    width: 100%;
     background-image: url(./images/mountains-2.jpg);
     background-size: 70% ;
     background-position: center center;
     background-repeat: no-repeat;
+    background-color: #304729;
 }
-.destination-holder {
-    position: relative;
-    left: -25%;
-    bottom: 100px;
+.blocnote {
+    background-image: url(./images/blocknote.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+.outline {
+    -webkit-filter: drop-shadow(2px 2px 0 white)
+                    drop-shadow(-2px 2px 0 white)
+                    drop-shadow(2px -2px 0 white)
+                    drop-shadow(-2px -2px 0 white);
+    filter: drop-shadow(2px 2px 0 white)
+            drop-shadow(-2px 2px 0 white)
+            drop-shadow(2px -2px 0 white)
+            drop-shadow(-2px -2px 0 white);
+    width: 100%;
+}
+.destination {
     display: flex;
     flex-direction: column;
-    background-image: url(./images/blocknote.png);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 350px;
     height: 400px;
+    position: relative;
+    left: 15%;
+    bottom: 100px;
+    z-index: 0;
 }
 h2 {
     font-size: 25px;
+    text-align: center;
     height: 100%;
-    align-self: center;
-    padding-top: 175px;
+    padding-top: 40%;
+}
+.duree {
+    width: 80%;
+    padding: 15px;
+    padding-bottom: 10%;
+    height: auto;
+}
+.duree img {
+    position: relative;
+    bottom: 50%;
+    z-index: -1;
+}
+h3 {
+    text-align: center;
+    font-size: 20px;
+    transform: rotate(-10deg);
+}
+.road {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
 }
