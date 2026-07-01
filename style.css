@@ -59,11 +59,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 450px;
-    height: 400px;
+    width: 400px;
+    height: 380px;
     position: relative;
     left: 5%;
-    bottom: 75px;
+    bottom:50px;
     z-index: 0;
 }
 .destination h2 {
@@ -120,9 +120,15 @@ header {
     width: 30%;
     height: 90%;
 }
-.lieux {
-    background-image: url(./images/paper.png);
-    background-size: cover;
+.paper {
+   background-image: url(./images/paper.png);
+    background-size: cover; 
+}
+.paper-2{
+   background-image: url(./images/paper-2.png);
+    background-size: cover; 
+}
+.lieux { 
     width: 45%;
     height: 95%;
     display: flex;
@@ -134,7 +140,42 @@ header {
 .lieux h3 {
     font-size: 32px;
 }
-.lieux li {
+.lieux li, p {
     font-family: "Marcelle";
     font-size: 24px;
+}
+.exigeances {
+    padding: 15px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.exigeances p {
+    width: 80%;
+}
+.planification {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+}
+.planification h3 {
+    font-size: 45px;
+    padding: 10px;
+}
+b {color:#37780b;}
+.hebergement {
+    width: 30%;
+    height: 300px;
+    padding: 8% 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hebergement p {
+    width: 80%;
+    text-align: center;
 }
