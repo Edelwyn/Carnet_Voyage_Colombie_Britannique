@@ -152,6 +152,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 .exigeances p {
     width: 80%;
