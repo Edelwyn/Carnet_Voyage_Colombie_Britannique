@@ -180,3 +180,259 @@ b {color:#37780b;}
     width: 80%;
     text-align: center;
 }
+.section-image{
+    width:100%;
+    max-height:300px;
+    object-fit:cover;
+    border-radius:10px;
+    margin:20px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+.histoire, .politique, .economie, .enjeux {
+    background-color: #ece1c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+}
+
+.scrap-spread {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.politique .scrap-spread,
+.enjeux .scrap-spread {
+    flex-direction: row-reverse;
+}
+
+.scrap-photo {
+    position: relative;
+    width: 38%;
+    flex-shrink: 0;
+}
+
+.scrap-photo .section-image {
+    width: 100%;
+    height: 340px;
+    border: 10px solid #fffdf7;
+    border-radius: 2px;
+    box-shadow: 0 12px 25px rgba(0,0,0,.25);
+    margin: 0;
+    transition: transform .3s ease;
+}
+
+.histoire .scrap-photo .section-image { transform: rotate(-3deg); }
+.politique .scrap-photo .section-image { transform: rotate(2deg); }
+.economie .scrap-photo .section-image { transform: rotate(-2deg); }
+.enjeux .scrap-photo .section-image { transform: rotate(3deg); }
+
+.scrap-photo:hover .section-image {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* coins de photo façon album souvenir */
+.scrap-photo::before,
+.scrap-photo::after {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background: #fffdf7;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 2;
+}
+.scrap-photo::before { top: 4px; left: 6%; }
+.scrap-photo::after  { bottom: 4px; right: 6%; transform: rotate(180deg); }
+
+.tape {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    width: 130px;
+    height: 55px;
+    background-image: url(./images/washitape.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-50%) rotate(-6deg);
+    opacity: .92;
+    z-index: 3;
+}
+
+.scrap-caption {
+    position: absolute;
+    bottom: -26px;
+    right: 8%;
+    font-family: "Marcelle";
+    font-size: 20px;
+    color: #4a3c28;
+    transform: rotate(3deg);
+}
+
+.scrap-note {
+    width: 54%;
+    padding: 45px 40px;
+    position: relative;
+}
+
+.histoire .scrap-note  { transform: rotate(1deg); }
+.politique .scrap-note { transform: rotate(-1deg); }
+.economie .scrap-note  { transform: rotate(1deg); }
+.enjeux .scrap-note    { transform: rotate(-1.5deg); }
+
+.scrap-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 5px 16px;
+    border: 2px dashed #536e41;
+    border-radius: 20px;
+    font-family: "Marcelle";
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #37780b;
+    transform: rotate(-2deg);
+}
+
+.scrap-note h2 {
+    font-size: 46px;
+    color: #304729;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.scrap-note p {
+    color: #4a3c28;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .scrap-spread,
+    .politique .scrap-spread,
+    .enjeux .scrap-spread {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .scrap-photo, .scrap-note {
+        width: 90%;
+    }
+    .histoire, .politique, .economie, .enjeux {
+        height: auto;
+        padding: 80px 5%;
+    }
+}
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+
+
+    * { margin: 0; box-sizing: border-box; }
+
+    body { font-family: "Segoe UI", sans-serif; background: #304729; }
+
+    .intro, .outro {
+        height: 55vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e8e2cf;
+        font-family: "Caveat", cursive;
+        font-size: 32px;
+        text-align: center;
+        padding: 0 10%;
+    }
+
+
+    .map-scroll-wrapper {
+        position: relative;
+        height: 310vh;
+        background: #536e41;
+    }
+
+    .map-scroll-sticky {
+        position: sticky;
+        top: 0;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .map-paper {
+        width: min(94vw, 1300px);
+        aspect-ratio: 2083 / 1719;
+        background: #ece1c4;
+        border: 10px solid #fffdf7;
+        box-shadow: 0 20px 50px rgba(0,0,0,.4);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .map-paper svg { width: 100%; height: 100%; display: block; }
+
+    .route-path {
+        fill: none;
+        stroke: #ff5d3b;
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        filter: drop-shadow(0 0 3px rgba(0,0,0,.5));
+    }
+
+    .route-path-glow {
+        fill: none;
+        stroke: #fff6e5;
+        stroke-width: 11;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        opacity: .55;
+    }
+
+    .route-marker {
+        opacity: 0;
+        transform: scale(0);
+        transform-box: fill-box;
+        transform-origin: center;
+        transition: opacity .35s ease, transform .35s ease;
+    }
+    .route-marker.visible { opacity: 1; transform: scale(1); }
+
+    .route-marker circle {
+        fill: #ff5d3b;
+        stroke: #fffdf7;
+        stroke-width: 3;
+    }
+
+    .route-marker text {
+        font-family: "Caveat", cursive;
+        font-weight: 700;
+        font-size: 26px;
+        fill: #fffdf7;
+        paint-order: stroke;
+        stroke: #304729;
+        stroke-width: 4px;
+    }
+
+    .map-title {
+        position: absolute;
+        top: 18px;
+        left: 30px;
+        font-family: "Caveat", cursive;
+        font-weight: 700;
+        font-size: 30px;
+        color: #fffdf7;
+        text-shadow: 0 2px 6px rgba(0,0,0,.5);
+        z-index: 5;
+    }
+
+    .map-progress-label {
+        position: absolute;
+        bottom: 16px;
+        right: 24px;
+        font-family: "Caveat", cursive;
+        font-size: 20px;
+        color: #fffdf7;
+        text-shadow: 0 2px 6px rgba(0,0,0,.5);
+        z-index: 5;
+    }
