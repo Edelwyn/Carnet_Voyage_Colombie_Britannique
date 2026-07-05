@@ -22,6 +22,9 @@ h2, h3 {
 h2 {
     font-size: 75px;
 }
+h3{
+    font-size: 35px;
+}
 header {
     width: 100%;
     height: 100vh;
@@ -39,12 +42,21 @@ header {
     background-size: cover;
 }
 .washitape {
+    position: absolute;
+    width: 130px;
+    height: 55px;
+    z-index: 3;
     background-image: url(./images/washitape.png);
-    background-size: contain;
+    background-size: cover;
 }
-.carnet-1, .carnet-2, .carnet-3, .carnet-4, .problematique, .conclusions, .mediagraphie {
+.carnet-1, .carnet-4, .problematique, .conclusions, .mediagraphie {
     height:100vh;
 }
+.carnet-3 {
+    height: 70vh;
+}
+.carnet-1-wrapper { height: 70vh;}
+.carnet-1-wrapper h2 { color: white}
 .outline {
     -webkit-filter: drop-shadow(4px 4px 0 white)
                     drop-shadow(-4px 4px 0 white)
@@ -102,7 +114,7 @@ header {
     font-size: 20px;
     color: black;
 }
-.carnet-1 {
+.carnet-1, .carnet-1-wrapper {
     padding: 50px;    
     background-color: #536e41;
     gap: 20px;
@@ -117,8 +129,8 @@ header {
     height: 100%;
 }
 .map {
-    width: 30%;
-    height: 90%;
+    width: 40%;
+    position: relative;
 }
 .paper {
    background-image: url(./images/paper.png);
@@ -130,7 +142,7 @@ header {
 }
 .lieux { 
     width: 45%;
-    height: 95%;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,11 +169,11 @@ header {
 .exigeances p {
     width: 80%;
 }
-.planification {
+.wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 70%;
+    height: 50vh;
 }
 .planification h3 {
     font-size: 45px;
@@ -189,13 +201,12 @@ b {color:#37780b;}
     box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 .histoire, .politique, .economie, .enjeux {
-    background-color: #ece1c4;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px 8%;
+    padding: 100px;
 }
-
 .scrap-spread {
     display: flex;
     align-items: center;
@@ -229,38 +240,16 @@ b {color:#37780b;}
 .politique .scrap-photo .section-image { transform: rotate(2deg); }
 .economie .scrap-photo .section-image { transform: rotate(-2deg); }
 .enjeux .scrap-photo .section-image { transform: rotate(3deg); }
-
 .scrap-photo:hover .section-image {
     transform: rotate(0deg) scale(1.03);
 }
-
-/* coins de photo façon album souvenir */
-.scrap-photo::before,
-.scrap-photo::after {
-    content: "";
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    background: #fffdf7;
-    box-shadow: 0 2px 6px rgba(0,0,0,.2);
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-    z-index: 2;
+.activites {
+    width: 40%;
+    padding:25px;
+    text-align: center;
 }
-.scrap-photo::before { top: 4px; left: 6%; }
-.scrap-photo::after  { bottom: 4px; right: 6%; transform: rotate(180deg); }
-
-.tape {
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    width: 130px;
-    height: 55px;
-    background-image: url(./images/washitape.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: translateX(-50%) rotate(-6deg);
-    opacity: .92;
-    z-index: 3;
+.activites p, .part-2 p{
+    font-size: 25px;
 }
 
 .scrap-caption {
@@ -274,11 +263,13 @@ b {color:#37780b;}
 }
 
 .scrap-note {
-    width: 54%;
+    width: 65%;
     padding: 45px 40px;
     position: relative;
 }
-
+.part-2 {
+    flex-direction: row-reverse;
+}
 .histoire .scrap-note  { transform: rotate(1deg); }
 .politique .scrap-note { transform: rotate(-1deg); }
 .economie .scrap-note  { transform: rotate(1deg); }
@@ -291,7 +282,6 @@ b {color:#37780b;}
     border: 2px dashed #536e41;
     border-radius: 20px;
     font-family: "Marcelle";
-    font-size: 16px;
     letter-spacing: 1px;
     color: #37780b;
     transform: rotate(-2deg);
@@ -324,115 +314,44 @@ b {color:#37780b;}
         padding: 80px 5%;
     }
 }
-    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
-
-
-    * { margin: 0; box-sizing: border-box; }
-
-    body { font-family: "Segoe UI", sans-serif; background: #304729; }
-
-    .intro, .outro {
-        height: 55vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #e8e2cf;
-        font-family: "Caveat", cursive;
-        font-size: 32px;
-        text-align: center;
-        padding: 0 10%;
-    }
-
-
-    .map-scroll-wrapper {
-        position: relative;
-        height: 310vh;
-        background: #536e41;
-    }
-
-    .map-scroll-sticky {
-        position: sticky;
-        top: 0;
-        height: 90vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .map-paper {
-        width: min(94vw, 1300px);
-        aspect-ratio: 2083 / 1719;
-        background: #ece1c4;
-        border: 10px solid #fffdf7;
-        box-shadow: 0 20px 50px rgba(0,0,0,.4);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .map-paper svg { width: 100%; height: 100%; display: block; }
-
-    .route-path {
-        fill: none;
-        stroke: #ff5d3b;
-        stroke-width: 6;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        filter: drop-shadow(0 0 3px rgba(0,0,0,.5));
-    }
-
-    .route-path-glow {
-        fill: none;
-        stroke: #fff6e5;
-        stroke-width: 11;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        opacity: .55;
-    }
-
-    .route-marker {
-        opacity: 0;
-        transform: scale(0);
-        transform-box: fill-box;
-        transform-origin: center;
-        transition: opacity .35s ease, transform .35s ease;
-    }
-    .route-marker.visible { opacity: 1; transform: scale(1); }
-
-    .route-marker circle {
-        fill: #ff5d3b;
-        stroke: #fffdf7;
-        stroke-width: 3;
-    }
-
-    .route-marker text {
-        font-family: "Caveat", cursive;
-        font-weight: 700;
-        font-size: 26px;
-        fill: #fffdf7;
-        paint-order: stroke;
-        stroke: #304729;
-        stroke-width: 4px;
-    }
-
-    .map-title {
-        position: absolute;
-        top: 18px;
-        left: 30px;
-        font-family: "Caveat", cursive;
-        font-weight: 700;
-        font-size: 30px;
-        color: #fffdf7;
-        text-shadow: 0 2px 6px rgba(0,0,0,.5);
-        z-index: 5;
-    }
-
-    .map-progress-label {
-        position: absolute;
-        bottom: 16px;
-        right: 24px;
-        font-family: "Caveat", cursive;
-        font-size: 20px;
-        color: #fffdf7;
-        text-shadow: 0 2px 6px rgba(0,0,0,.5);
-        z-index: 5;
-    }
+.problematique {
+    background-image: url(./images/bc-landscape.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.analyse {
+    width: 45%;
+    padding: 50px 75px 50px 100px;
+}
+.conclusions {
+    padding: 75px 0 100px 50px;
+}
+.carnet-2, .carnet-3, .conclusions {
+    background-color: rgb(240, 242, 207);
+}
+.individuelles {
+    display: flex;
+    height: 100%;
+    padding: 0 5% 0 5%;
+    gap: 20px;
+}
+.justin, .edelwyn, .florence {
+    position: relative;
+    height: 45%;
+    padding: 25px 25px 25px 75px;
+}
+.edelwyn {
+    top: 40%;
+}
+.mediagraphie {
+    padding: 5%;
+    text-align: left;
+    background-image: url(./images/notebook.jpeg);
+    background-size: cover;
+}
+.mediagraphie li {
+    font-size : 20px;
+}
