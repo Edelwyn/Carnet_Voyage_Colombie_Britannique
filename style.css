@@ -16,7 +16,7 @@ h1 {
     padding-top: 5%;
     color: #536e41;
 }
-h2, h3 {
+h2, h3, li, p {
     font-family: "Marcelle";
 }
 h2 {
@@ -24,6 +24,12 @@ h2 {
 }
 h3{
     font-size: 35px;
+}
+p {
+    font-size: 24px;
+}
+li {
+    line-height: 2.5rem;
 }
 header {
     width: 100%;
@@ -152,8 +158,7 @@ header {
 .lieux h3 {
     font-size: 32px;
 }
-.lieux li, p {
-    font-family: "Marcelle";
+.lieux li {
     font-size: 24px;
 }
 .exigeances {
@@ -267,9 +272,12 @@ b {color:#37780b;}
     padding: 45px 40px;
     position: relative;
 }
-.part-2 {
+.histoire .part-2, .economie .part-2 {
     flex-direction: row-reverse;
 }
+ .economie .part-2 li{
+    font-size: 25px;
+ }
 .histoire .scrap-note  { transform: rotate(1deg); }
 .politique .scrap-note { transform: rotate(-1deg); }
 .economie .scrap-note  { transform: rotate(1deg); }
@@ -295,7 +303,6 @@ b {color:#37780b;}
 }
 
 .scrap-note p {
-    color: #4a3c28;
     line-height: 1.5;
 }
 
