@@ -55,12 +55,7 @@ header {
     background-image: url(./images/washitape.png);
     background-size: cover;
 }
-.carnet-1, .carnet-4, .problematique, .conclusions, .mediagraphie {
-    height:100vh;
-}
-.carnet-3 {
-    height: 70vh;
-}
+.carnet-1,.carnet-3, .carnet-4, .problematique, .conclusions, .mediagraphie {height:100vh;}
 .carnet-1-wrapper { height: 70vh;}
 .carnet-1-wrapper h2 { color: white}
 .outline {
@@ -77,6 +72,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 400px;
     height: 380px;
     position: relative;
@@ -87,8 +83,11 @@ header {
 .destination h2 {
     font-size: 25px;
     text-align: center;
-    padding-top: 20%;
-    transform: rotate(5deg);
+    transform: rotate(6deg);
+}
+.carnet-1 h2, .carnet-1-wrapper h2 {
+    background-color: rgba(255, 255, 255, 0.253);
+    color:white;
 }
 .duree {
     display: flex;
@@ -97,15 +96,12 @@ header {
     width: 100%;
 }
 .duree h3 {
-    transform: rotate(-10deg);    
-    color: white;
+    transform: rotate(6deg);    
     font-size: 25px;
     text-align: center;
-    padding: 30px;
+    padding: 15px;
 }
-.road, .panneau {
-    position: absolute;
-}
+.road, .panneau {position: absolute;}
 .road {
     right: 0%;
     bottom: 0%;
@@ -125,8 +121,18 @@ header {
     background-color: #536e41;
     gap: 20px;
 }
-.carnet-1 h2 {
-    color: white
+.objectif {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 350px;
+    padding: 20px;
+    left: 6%;
+    bottom: 12%;
+    transform: rotate(-5deg);
+}
+.objectif h2{
+    font-size: 45px;
 }
 .itineraire {
     display: flex;
@@ -147,12 +153,12 @@ header {
     background-size: cover; 
 }
 .lieux { 
-    width: 45%;
-    height: 95vh;
+    width: 50%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     padding-left: 5%;
 }
 .lieux h3 {
@@ -171,9 +177,7 @@ header {
     justify-content: center;
     gap: 10px;
 }
-.exigeances p {
-    width: 80%;
-}
+.exigeances p {width: 80%;}
 .wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -210,7 +214,8 @@ b {color:#37780b;}
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 100px;
+    padding: 80px;
+    gap: 30px;
 }
 .scrap-spread {
     display: flex;
@@ -219,18 +224,13 @@ b {color:#37780b;}
     max-width: 1200px;
     width: 100%;
 }
-
 .politique .scrap-spread,
-.enjeux .scrap-spread {
-    flex-direction: row-reverse;
-}
-
+.enjeux .scrap-spread { flex-direction: row-reverse;}
 .scrap-photo {
     position: relative;
     width: 38%;
     flex-shrink: 0;
 }
-
 .scrap-photo .section-image {
     width: 100%;
     height: 340px;
@@ -256,17 +256,15 @@ b {color:#37780b;}
 .activites p, .part-2 p{
     font-size: 25px;
 }
-
 .scrap-caption {
     position: absolute;
-    bottom: -26px;
-    right: 8%;
+    bottom: -50px;
+    right: 2%;
     font-family: "Marcelle";
     font-size: 20px;
     color: #4a3c28;
     transform: rotate(3deg);
 }
-
 .scrap-note {
     width: 65%;
     padding: 45px 40px;
@@ -275,9 +273,7 @@ b {color:#37780b;}
 .histoire .part-2, .economie .part-2 {
     flex-direction: row-reverse;
 }
- .economie .part-2 li{
-    font-size: 25px;
- }
+ .economie .part-2 li{ font-size: 25px;}
 .histoire .scrap-note  { transform: rotate(1deg); }
 .politique .scrap-note { transform: rotate(-1deg); }
 .economie .scrap-note  { transform: rotate(1deg); }
@@ -294,18 +290,15 @@ b {color:#37780b;}
     color: #37780b;
     transform: rotate(-2deg);
 }
-
 .scrap-note h2 {
     font-size: 46px;
     color: #304729;
     margin-bottom: 20px;
     line-height: 1.1;
 }
-
 .scrap-note p {
     line-height: 1.5;
 }
-
 @media (max-width: 900px) {
     .scrap-spread,
     .politique .scrap-spread,
@@ -361,4 +354,9 @@ b {color:#37780b;}
 }
 .mediagraphie li {
     font-size : 20px;
+}
+a {color:#37780b;}
+a:hover {
+    color:#304729;
+    font-size: 28px;
 }
