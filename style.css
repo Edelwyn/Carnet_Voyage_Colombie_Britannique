@@ -127,6 +127,19 @@ header {
     background-color: #536e41;
     gap: 20px;
 }
+nav {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0 10px 0;
+}
+nav h2 { font-size: 30px;}
+nav a {font-size: 20px; font-family: "Marcelle";}
+.liens {
+    display: flex;
+    justify-content: space-evenly;
+}
 .objectif {
     display: block;
     position: relative;
@@ -351,7 +364,7 @@ b {color:#37780b;}
 .conclusions {
     padding: 75px 50px 100px 50px;
 }
-.carnet-2, .carnet-3, .conclusions {
+.carnet-2, .carnet-3, .conclusions, nav {
     background-color: rgb(240, 242, 207);
 }
 .individuelles {
