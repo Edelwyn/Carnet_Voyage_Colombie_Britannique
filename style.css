@@ -55,7 +55,7 @@ header {
     background-image: url(./images/washitape.png);
     background-size: cover;
 }
-.carnet-1,.carnet-3, .carnet-4, .problematique, .conclusions, .mediagraphie {height:100vh;}
+.carnet-1, .carnet-4, .conclusions, .mediagraphie {height:100vh;}
 .carnet-1-wrapper { height: 70vh;}
 .carnet-1-wrapper h2 { color: white}
 .outline {
@@ -168,8 +168,7 @@ header {
     font-size: 24px;
 }
 .exigeances {
-    padding: 15px;
-    width: 50%;
+    width: 40%;
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -186,7 +185,6 @@ header {
 }
 .planification h3 {
     font-size: 45px;
-    padding: 10px;
 }
 b {color:#37780b;}
 .hebergement {
@@ -250,7 +248,6 @@ b {color:#37780b;}
 }
 .activites {
     width: 40%;
-    padding:25px;
     text-align: center;
 }
 .activites p, .part-2 p{
@@ -266,19 +263,26 @@ b {color:#37780b;}
     transform: rotate(3deg);
 }
 .scrap-note {
-    width: 65%;
-    padding: 45px 40px;
+    width: 55%;
+    padding: 45px 40px 40px 6%;
     position: relative;
 }
-.histoire .part-2, .economie .part-2 {
+.histoire .part-2, .economie .part-2  {
     flex-direction: row-reverse;
 }
+.politique .part-2, .enjeux .part-2 { flex-direction: row; }
  .economie .part-2 li{ font-size: 25px;}
 .histoire .scrap-note  { transform: rotate(1deg); }
 .politique .scrap-note { transform: rotate(-1deg); }
 .economie .scrap-note  { transform: rotate(1deg); }
 .enjeux .scrap-note    { transform: rotate(-1.5deg); }
 
+.politique .part-2 li {
+    font-size: 24px;
+}
+.politique .part-3 {
+    width: 55%;
+}
 .scrap-tag {
     display: inline-block;
     margin-bottom: 14px;
@@ -321,10 +325,11 @@ b {color:#37780b;}
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 7% 0 7% 0;
 }
 .analyse {
     width: 45%;
-    padding: 50px 75px 50px 100px;
+    padding: 50px 50px 50px 50px;
 }
 .conclusions {
     padding: 75px 0 100px 50px;
