@@ -357,10 +357,17 @@ b {color:#37780b;}
     background-image: url(./images/notebook.jpeg);
     background-size: cover;
 }
+.pages {
+    display: flex;
+    justify-content: space-around;
+}
+.page-2 {
+    align-items: flex-start;
+}
 .mediagraphie li {
     font-size : 20px;
 }
-a {color:#37780b;}
+a {color:#37780b; text-decoration: none;}
 a:hover {
     color:#304729;
     font-size: 28px;
