@@ -55,7 +55,8 @@ header {
     background-image: url(./images/washitape.png);
     background-size: cover;
 }
-.carnet-1, .carnet-4, .conclusions, .mediagraphie {height:100vh;}
+.carnet-1, .carnet-4, .conclusions {height:100vh;}
+.conclusions {height: 110vh;}
 .carnet-1-wrapper { height: 70vh;}
 .carnet-1-wrapper h2 { color: white}
 .outline {
@@ -101,7 +102,7 @@ header {
     text-align: center;
     padding: 15px;
 }
-.road, .panneau {position: absolute;}
+.road, .panneau,.vehicule {position: absolute;}
 .road {
     right: 0%;
     bottom: 0%;
@@ -110,6 +111,11 @@ header {
     width: 300px;
     bottom: 0%;
     right: 15%;
+}
+.vehicule {
+    width: 450px;
+    transform: rotate(8deg);
+    left: 30%;
 }
 .context h3 {
     width: 100%;
@@ -141,8 +147,13 @@ header {
     height: 100%;
 }
 .map {
-    width: 40%;
+    width: 45%;
     position: relative;
+    display: flex;
+    align-items: center;
+}
+.trajet {
+    width: 100%;
 }
 .paper {
    background-image: url(./images/paper.png);
@@ -153,7 +164,7 @@ header {
     background-size: cover; 
 }
 .lieux { 
-    width: 50%;
+    width: 40%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -226,7 +237,7 @@ b {color:#37780b;}
 .enjeux .scrap-spread { flex-direction: row-reverse;}
 .scrap-photo {
     position: relative;
-    width: 38%;
+    width: 40%;
     flex-shrink: 0;
 }
 .scrap-photo .section-image {
@@ -238,7 +249,9 @@ b {color:#37780b;}
     margin: 0;
     transition: transform .3s ease;
 }
-
+.problematique .scrap-photo {
+    width: 40%;
+}
 .histoire .scrap-photo .section-image { transform: rotate(-3deg); }
 .politique .scrap-photo .section-image { transform: rotate(2deg); }
 .economie .scrap-photo .section-image { transform: rotate(-2deg); }
@@ -322,17 +335,21 @@ b {color:#37780b;}
     background-image: url(./images/bc-landscape.jpg);
     background-size: cover;
     display: flex;
+    height: 140vh;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 7% 0 7% 0;
+}
+.problematique .wrapper {
+    flex-direction: row;
+    height: auto;
 }
 .analyse {
     width: 45%;
     padding: 50px 50px 50px 50px;
 }
 .conclusions {
-    padding: 75px 0 100px 50px;
+    padding: 75px 50px 100px 50px;
 }
 .carnet-2, .carnet-3, .conclusions {
     background-color: rgb(240, 242, 207);
@@ -340,12 +357,15 @@ b {color:#37780b;}
 .individuelles {
     display: flex;
     height: 100%;
-    padding: 0 5% 0 5%;
     gap: 20px;
 }
 .justin, .edelwyn, .florence {
     position: relative;
-    height: 45%;
+    width: 35%;
+    max-height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 25px 25px 25px 75px;
 }
 .edelwyn {
