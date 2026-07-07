@@ -394,6 +394,15 @@ b {color:#37780b;}
 .conclusions {
     padding: 75px 50px 100px 50px;
 }
+.feux {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 350px;
+    height: 350px;
+    padding: 80px;
+}
 .carnet-2, .carnet-3, .conclusions, nav {
     background-color: rgb(240, 242, 207);
 }
