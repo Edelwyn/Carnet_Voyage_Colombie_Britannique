@@ -442,3 +442,56 @@ a:hover {
     color:#304729;
     font-size: 28px;
 }
+.map .section-image {
+    height: auto;
+    aspect-ratio: 2083 / 1719;
+    transform: rotate(-2deg);
+}
+
+.map svg { display: block; }
+
+.route-path {
+    fill: none;
+    stroke: #ff5d3b;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 3px rgba(0,0,0,.5));
+}
+
+.route-path-glow {
+    fill: none;
+    stroke: #fff6e5;
+    stroke-width: 11;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: .55;
+}
+
+.route-marker {
+    opacity: 0;
+    transform: scale(0);
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: opacity .35s ease, transform .35s ease;
+}
+.route-marker.visible { opacity: 1; transform: scale(1); }
+
+.route-marker circle {
+    fill: #ff5d3b;
+    stroke: #fffdf7;
+    stroke-width: 3;
+}
+
+.route-marker text {
+    font-family: "Marcelle";
+    font-size: 26px;
+    fill: #fffdf7;
+    paint-order: stroke;
+    stroke: #304729;
+    stroke-width: 4px;
+}
+
+.scrap-note {
+    will-change: transform, opacity;
+}

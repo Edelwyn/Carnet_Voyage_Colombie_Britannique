@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Road trip jusqu'à la Colombie-Britannique</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./script.js"></script>
 </head>
 
 <body>
@@ -46,12 +49,34 @@
     </nav>
     <div class="carnet-1">
         <h2 class="scrap-tag">Itinéraire planifié</h2>
-        <div class="itineraire" id="itineraire">
+                <div class="itineraire" id="itineraire">
             <div class="map scrap-photo">
                 <span class="washitape"></span>
-                <img src="./images/itineraire.png" class="trajet section-image">
+                <svg class="trajet section-image" style="background-color: white; border: 10px solid black;"  viewBox="0 0 2083 1719" preserveAspectRatio="xMidYMid meet">
+                    <image href="./images/canada-satellite.jpg" x="0" y="0" width="2083" height="1719" preserveAspectRatio="xMidYMid slice"/>
+                
+                    <path class="route-path-glow" id="routeGlow"
+                        d="M1368,1619 C1273.7,1560.7 920.7,1341.2 802,1269 C683.3,1196.8 715.5,1206.8 656,1186 C596.5,1165.2 486.3,1152.5 445,1144 C403.7,1135.5 417.0,1139.0 408,1135 C399.0,1131.0 404.2,1108.2 391,1120 C377.8,1131.8 353.5,1194.2 329,1206 C304.5,1217.8 257.3,1185.5 244,1191 C230.7,1196.5 247.0,1233.3 249,1239 C251.0,1244.7 196.0,1250.5 256,1225 C316.0,1199.5 497.3,1085.3 609,1086 C720.7,1086.7 849.8,1191.5 926,1229 C1002.2,1266.5 1019.7,1279.2 1066,1311 C1112.3,1342.8 1161.3,1399.5 1204,1420 C1246.7,1440.5 1291.0,1404.8 1322,1434 C1353.0,1463.2 1378.7,1568.2 1390,1595" />
+                    <path class="route-path" id="routePath"
+                        d="M1368,1619 C1273.7,1560.7 920.7,1341.2 802,1269 C683.3,1196.8 715.5,1206.8 656,1186 C596.5,1165.2 486.3,1152.5 445,1144 C403.7,1135.5 417.0,1139.0 408,1135 C399.0,1131.0 404.2,1108.2 391,1120 C377.8,1131.8 353.5,1194.2 329,1206 C304.5,1217.8 257.3,1185.5 244,1191 C230.7,1196.5 247.0,1233.3 249,1239 C251.0,1244.7 196.0,1250.5 256,1225 C316.0,1199.5 497.3,1085.3 609,1086 C720.7,1086.7 849.8,1191.5 926,1229 C1002.2,1266.5 1019.7,1279.2 1066,1311 C1112.3,1342.8 1161.3,1399.5 1204,1420 C1246.7,1440.5 1291.0,1404.8 1322,1434 C1353.0,1463.2 1378.7,1568.2 1390,1595" />
+                
+                    <g class="route-marker" data-cx="1368" data-cy="1619"><circle cx="1368" cy="1619" r="10"/><text x="1368" y="1655" text-anchor="middle">Niagara Falls</text></g>
+                    <g class="route-marker" data-cx="802" data-cy="1269"><circle cx="802" cy="1269" r="10"/><text x="802" y="1305" text-anchor="middle">Jardin de la Paix</text></g>
+                    <g class="route-marker" data-cx="656" data-cy="1186"><circle cx="656" cy="1186" r="10"/><text x="656" y="1170" text-anchor="middle">Moose Jaw</text></g>
+                    <g class="route-marker" data-cx="445" data-cy="1144"><circle cx="445" cy="1144" r="10"/><text x="445" y="1128" text-anchor="middle">Calgary</text></g>
+                    <g class="route-marker" data-cx="408" data-cy="1135"><circle cx="408" cy="1135" r="10"/><text x="360" y="1105" text-anchor="middle">Banff</text></g>
+                    <g class="route-marker" data-cx="391" data-cy="1120"><circle cx="391" cy="1120" r="10"/><text x="320" y="1150" text-anchor="middle">Lac Louise</text></g>
+                    <g class="route-marker" data-cx="329" data-cy="1206"><circle cx="329" cy="1206" r="10"/><text x="329" y="1240" text-anchor="middle">Okanagan</text></g>
+                    <g class="route-marker" data-cx="244" data-cy="1191"><circle cx="244" cy="1191" r="10"/><text x="244" y="1160" text-anchor="middle">Whistler</text></g>
+                    <g class="route-marker" data-cx="249" data-cy="1239"><circle cx="249" cy="1239" r="10"/><text x="200" y="1275" text-anchor="middle">Granville</text></g>
+                    <g class="route-marker" data-cx="256" data-cy="1225"><circle cx="256" cy="1225" r="10"/><text x="140" y="1210" text-anchor="middle">Capilano</text></g>
+                    <g class="route-marker" data-cx="1066" data-cy="1311"><circle cx="1066" cy="1311" r="10"/><text x="1066" y="1345" text-anchor="middle">Thunder Bay</text></g>
+                    <g class="route-marker" data-cx="1204" data-cy="1420"><circle cx="1204" cy="1420" r="10"/><text x="1204" y="1454" text-anchor="middle">Sault Ste-Marie</text></g>
+                    <g class="route-marker" data-cx="1322" data-cy="1434"><circle cx="1322" cy="1434" r="10"/><text x="1322" y="1468" text-anchor="middle">North Bay</text></g>
+                    <g class="route-marker" data-cx="1390" data-cy="1595"><circle cx="1390" cy="1595" r="10"/><text x="1440" y="1595" text-anchor="middle">Retour</text></g>
+                </svg>
             </div>
-            <div class="lieux paper">
+                        <div class="lieux paper">
                 <h3>Jour 1-5 : Chemin aller</h3>
                 <ul>
                     <li>J-1 : Niagara Falls</li>
@@ -330,11 +355,10 @@
             <div class="justin paper-2 outline">
                 <h3>Justin</h3>
                 <p>
-                    Nulla auctor iaculis lacus, eget eleifend lectus iaculis eu. Nunc vel eleifend erat, nec
-                    vulputate
-                    lectus. Quisque accumsan dignissim posuere. Pellentesque congue metus sed ligula facilisis
-                    luctus.
-                    Nulla hendrerit pulvinar mauris id convallis.</p>
+                    Je remarque une envie croissante de vouloir faire ce voyage pour vrai. La plupart du temps, on veut 
+                aller voir la culture des gens ailleurs, alors qu'on ne connaît pas réellement la nôtre. Il est important 
+            selon moi d'explorer son pays avant d'aller s'aventurer ailleurs. Il y a assez de choses à explorer ici pour convenir
+        à plus qu'une vie.</p>
             </div>
             <div class="edelwyn paper outline">
                 <h3>Edelwyn</h3>
